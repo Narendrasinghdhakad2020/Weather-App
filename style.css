@@ -1,0 +1,218 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root{
+    --colorDarK1:#112D4E;
+    --colorDark2:#3F72AF;
+    --colorLight1:#DBE2EF;
+    --colorLight2:#f9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color:var(--colorLight2);
+    background-image: linear-gradient(160deg,#112d4e 0%, #3f72af 100%);
+    
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+.tab-container{
+    width: 90%;
+    max-width: 550px;
+    margin:0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.tab{
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1.45px;
+    padding: 4px 8px;
+}
+.tab.current-Tab{
+    background-color: #c3cce08f;
+    border-radius: 4px;
+}
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block:4rem;
+}
+.btn{
+    all: unset;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+    border-radius: 4px;
+    filter: drop-shadow(3px 3px 3px solid black);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+    margin-bottom: 3rem;
+}
+.grant-location-container p:first-of-type{
+    font-size: 1.85rem;
+    font-weight: 800;
+}
+.grant-location-container p:last-of-type{
+    font-size: 0.87rem;
+    font-weight: 500;
+    margin: 0.75rem 0;
+    letter-spacing: 0.75px;
+}
+
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.user-info-container p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+.name p{
+    font-size: 2rem;
+}
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.user-info-container p[data-temp]{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.parameter-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    margin-top: 2rem;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+.parameter{
+    
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem 0;
+    background-color: #46649e;
+    border-radius: 7px;
+}
+.parameter img{
+    width: 50px;
+    height: 50px;
+    margin-top: 0.75rem;
+}
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+}
+.parameter p:last-of-type{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 0 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+.form-container.active{
+    display: flex;
+    
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 15px;
+    background-color:#4b6dad;
+    color: white;
+}
+.form-container input:focus{
+    outline: 2px solid rgba(255, 255, 255, 0.87);
+}
+.form-container input::placeholder{
+    color:rgb(255, 255, 255,0.9);
+}
+.form-container .btn {
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    
+}
+
+
+.form-container .btn img{
+    margin-left: 0.7rem;
+    margin-top: 0.3rem;
+    
+}
+.form-container .btn:focus{
+    outline: 2px solid white;
+}
+
